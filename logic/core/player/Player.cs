@@ -14,11 +14,11 @@ public partial class Player : Node {
 
     public int Experience { get; private set; } = 0;
 
-    public int Gold { get; private set; } = 0;
+    public int Gold { get; private set; } = 100;
     
     public Board Board { get; private set; }
     
-    public Bench Bench { get; private set; }
+    [Export] public Bench Bench { get; private set; }
     
     public Calculation BoardSize { get; private set; } = new Calculation(1);
 

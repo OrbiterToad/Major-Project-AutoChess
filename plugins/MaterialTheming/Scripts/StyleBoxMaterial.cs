@@ -146,7 +146,7 @@ public partial class StyleBoxMaterial : StyleBox {
 
     private static void FramePreDraw() {
         // I do not know why this is not an engine feature to begin with, shader TIME does not reliably reflect the time available from outside
-        if (!RenderingServer.GlobalShaderParameterGetList().Contains("ACTUAL_TIME"))
+        if (Engine.IsEditorHint() && !RenderingServer.GlobalShaderParameterGetList().Contains("ACTUAL_TIME"))
             RenderingServer.GlobalShaderParameterAdd("ACTUAL_TIME", RenderingServer.GlobalShaderParameterType.Float, 0f);
         RenderingServer.GlobalShaderParameterSet("ACTUAL_TIME", Time.GetTicksMsec() / 1000f);
     }

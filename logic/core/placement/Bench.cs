@@ -9,11 +9,13 @@ public partial class Bench : Node {
 
     public Player Player { get; set; }
     
+    [Export] public Node SlotContainer { get; set; }
+    
     private readonly List<SingleUnitSlot> slots = new List<SingleUnitSlot>();
 
     public override void _Ready() {
         slots.Clear();
-        foreach (Node child in GetChildren()) {
+        foreach (Node child in SlotContainer.GetChildren()) {
             if (child is SingleUnitSlot slot) {
                 slots.Add(slot);
             }

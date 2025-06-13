@@ -16,9 +16,7 @@ HoverOffTexture = ExtResource("2_4bltr")
 HoverOnTexture = ExtResource("3_r8e0r")
 
 [node name="HoverEffect" type="Sprite2D" parent="."]
-position = Vector2(32, 0)
 texture = ExtResource("2_4bltr")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(32, 0)
 shape = SubResource("RectangleShape2D_fdjcy")

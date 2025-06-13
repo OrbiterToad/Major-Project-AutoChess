@@ -10,7 +10,7 @@ public partial class DummyGameManager : Node {
 
     public static DummyGameManager Instance { get; private set; }
 
-    public override void _Ready() {
+    public override void _EnterTree() {
         Instance = this;
     }
 

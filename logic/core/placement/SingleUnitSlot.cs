@@ -34,15 +34,15 @@ public partial class SingleUnitSlot : Area2D, UnitContainer {
 
     public override void _EnterTree() {
         HoverEffect.Texture = HoverOnTexture; // make sure the hover effect is not visible initially (it is visible in editor for placement)
-        PlayerController.OnDragStart += OnDragStart;
-        PlayerController.OnDragProcess += OnDragProcess;
-        PlayerController.OnDragEnd += OnDragEnd;
+        PlayerController.Instance.OnDragStart += OnDragStart;
+        PlayerController.Instance.OnDragProcess += OnDragProcess;
+        PlayerController.Instance.OnDragEnd += OnDragEnd;
     }
     
     public override void _ExitTree() {
-        PlayerController.OnDragStart -= OnDragStart;
-        PlayerController.OnDragProcess -= OnDragProcess;
-        PlayerController.OnDragEnd -= OnDragEnd;
+        PlayerController.Instance.OnDragStart -= OnDragStart;
+        PlayerController.Instance.OnDragProcess -= OnDragProcess;
+        PlayerController.Instance.OnDragEnd -= OnDragEnd;
     }
 
     public bool IsValidDrop(unit.Unit unit, Vector2 pos) {
@@ -88,5 +88,7 @@ public partial class SingleUnitSlot : Area2D, UnitContainer {
     public void AddUnit(unit.Unit unit, Vector2 position) {
         Unit = unit;
         unit.Container = this;
+        AddChild(unit.Type.UnitInstancePrefab.Instantiate());
+        GD.Print("Hello");
     }
 }

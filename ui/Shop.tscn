@@ -1,5 +1,6 @@
-[gd_scene load_steps=8 format=3 uid="uid://b1mjtwvjjws5j"]
+[gd_scene load_steps=9 format=3 uid="uid://b1mjtwvjjws5j"]
 
+[ext_resource type="Script" path="res://logic/core/shop/Shop.cs" id="1_2rksl"]
 [ext_resource type="Script" path="res://plugins/MaterialTheming/Scripts/PolygonInfo.cs" id="1_ar8y8"]
 [ext_resource type="Material" uid="uid://b2mv00fv4xlp6" path="res://plugins/MaterialTheming/shaders/DecoratedPanelMaterial.tres" id="2_k1ply"]
 [ext_resource type="Script" path="res://plugins/MaterialTheming/Scripts/StyleBoxDecorated.cs" id="3_lwyo3"]
@@ -40,7 +41,7 @@ AdditionalContentMarginBottom = 4.0
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3hw7j"]
 bg_color = Color(0, 0, 0, 0.454)
 
-[node name="Shop" type="Control"]
+[node name="Shop" type="Control" node_paths=PackedStringArray("RerollButton", "XpButton", "GoldLabel", "ShopSlotContainer")]
 layout_mode = 3
 anchor_left = 0.2
 anchor_top = 0.8
@@ -48,6 +49,11 @@ anchor_right = 0.8
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 0
+script = ExtResource("1_2rksl")
+RerollButton = NodePath("PanelContainer/HBoxContainer/VBoxContainer/Button")
+XpButton = NodePath("PanelContainer/HBoxContainer/VBoxContainer/Button2")
+GoldLabel = NodePath("PanelContainer/HBoxContainer/VBoxContainer/Label")
+ShopSlotContainer = NodePath("PanelContainer/HBoxContainer/HBoxContainer")
 
 [node name="PanelContainer" type="PanelContainer" parent="."]
 layout_mode = 1
@@ -75,6 +81,9 @@ text = "Reroll"
 layout_mode = 2
 text = "Buy XP"
 
+[node name="Label" type="Label" parent="PanelContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
 [node name="Panel" type="Panel" parent="PanelContainer/HBoxContainer"]
 custom_minimum_size = Vector2(1, 0)
 layout_mode = 2
@@ -95,16 +104,22 @@ stretch_mode = 5
 layout_mode = 2
 size_flags_horizontal = 3
 texture_normal = ExtResource("4_jlcbb")
-stretch_mode = 3
+stretch_mode = 5
 
 [node name="TextureButton3" type="TextureButton" parent="PanelContainer/HBoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 texture_normal = ExtResource("4_jlcbb")
-stretch_mode = 3
+stretch_mode = 5
 
 [node name="TextureButton4" type="TextureButton" parent="PanelContainer/HBoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 texture_normal = ExtResource("4_jlcbb")
-stretch_mode = 3
+stretch_mode = 5
+
+[node name="TextureButton5" type="TextureButton" parent="PanelContainer/HBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+texture_normal = ExtResource("4_jlcbb")
+stretch_mode = 5

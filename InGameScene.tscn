@@ -1,18 +1,17 @@
-[gd_scene load_steps=6 format=3 uid="uid://blm4vucwag1rg"]
+[gd_scene load_steps=8 format=3 uid="uid://blm4vucwag1rg"]
 
 [ext_resource type="Script" path="res://logic/core/player/PlayerController.cs" id="1_1ss78"]
 [ext_resource type="PackedScene" uid="uid://cvu8csgnfw3cs" path="res://ui/Bench.tscn" id="2_166rw"]
 [ext_resource type="Script" path="res://logic/core/game/DummyGameManager.cs" id="3_dkcr1"]
 [ext_resource type="Script" path="res://logic/season0/Season0.cs" id="4_qnth6"]
 [ext_resource type="Resource" uid="uid://15mwm4jux6bs" path="res://assets/season0/season0_units.tres" id="5_o5nxx"]
+[ext_resource type="PackedScene" uid="uid://b1mjtwvjjws5j" path="res://ui/Shop.tscn" id="6_5154x"]
+[ext_resource type="Script" path="res://logic/core/player/Player.cs" id="6_jbqxp"]
 
 [node name="InGameScene" type="Node2D"]
 
 [node name="PlayerController" type="Node2D" parent="."]
 script = ExtResource("1_1ss78")
-
-[node name="Bench" parent="." instance=ExtResource("2_166rw")]
-position = Vector2(276, 431)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 anchor_mode = 0
@@ -24,3 +23,20 @@ Season = NodePath("Season")
 [node name="Season" type="Node" parent="DummyGameManager"]
 script = ExtResource("4_qnth6")
 Units = ExtResource("5_o5nxx")
+
+[node name="PlayerManager" type="Node2D" parent="." node_paths=PackedStringArray("CurrentPlayer")]
+script = ExtResource("1_1ss78")
+CurrentPlayer = NodePath("Player")
+
+[node name="Player" type="Node" parent="PlayerManager" node_paths=PackedStringArray("Bench")]
+script = ExtResource("6_jbqxp")
+Bench = NodePath("Bench")
+
+[node name="Bench" parent="PlayerManager/Player" instance=ExtResource("2_166rw")]
+position = Vector2(593, 494)
+
+[node name="Shop" parent="." instance=ExtResource("6_5154x")]
+offset_left = 598.0
+offset_top = 604.0
+offset_right = 598.0
+offset_bottom = 604.0

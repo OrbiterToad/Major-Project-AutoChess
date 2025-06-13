@@ -8,17 +8,23 @@ namespace MPAutoChess.logic.core.player;
 
 public partial class PlayerController : Node2D {
     
-    public static Player CurrentPlayer { get; private set; }
+    [Export] public Player CurrentPlayer { get; private set; }
 
-    public static event Action<Unit> OnDragStart = unit => { };
-    public static event Action<Unit, UnitDropTarget?, Vector2> OnDragProcess = (unit, target, position) => { };
-    public static event Action<Unit> OnDragEnd = unit => { };
+    public event Action<Unit> OnDragStart = unit => { };
+    public event Action<Unit, UnitDropTarget?, Vector2> OnDragProcess = (unit, target, position) => { };
+    public event Action<Unit> OnDragEnd = unit => { };
     
     private UnitInstance? unitInstanceUnderMouse;
     private UnitDropTarget? unitDropTargetUnderMouse;
     private Vector2 unitDropPositionUnderMouse;
     
     public Unit CurrentlyDraggedUnit { get; private set; }
+    
+    public static PlayerController Instance { get; private set; }
+
+    public override void _EnterTree() {
+        Instance = this;
+    }
 
     public override void _Input(InputEvent @event) {
         if (@event is InputEventMouseButton mouseButtonEvent) {
