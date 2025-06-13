@@ -1,0 +1,26 @@
+[gd_scene load_steps=6 format=3 uid="uid://blm4vucwag1rg"]
+
+[ext_resource type="Script" path="res://logic/core/player/PlayerController.cs" id="1_1ss78"]
+[ext_resource type="PackedScene" uid="uid://cvu8csgnfw3cs" path="res://ui/Bench.tscn" id="2_166rw"]
+[ext_resource type="Script" path="res://logic/core/game/DummyGameManager.cs" id="3_dkcr1"]
+[ext_resource type="Script" path="res://logic/season0/Season0.cs" id="4_qnth6"]
+[ext_resource type="Resource" uid="uid://15mwm4jux6bs" path="res://assets/season0/season0_units.tres" id="5_o5nxx"]
+
+[node name="InGameScene" type="Node2D"]
+
+[node name="PlayerController" type="Node2D" parent="."]
+script = ExtResource("1_1ss78")
+
+[node name="Bench" parent="." instance=ExtResource("2_166rw")]
+position = Vector2(276, 431)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+
+[node name="DummyGameManager" type="Node" parent="." node_paths=PackedStringArray("Season")]
+script = ExtResource("3_dkcr1")
+Season = NodePath("Season")
+
+[node name="Season" type="Node" parent="DummyGameManager"]
+script = ExtResource("4_qnth6")
+Units = ExtResource("5_o5nxx")

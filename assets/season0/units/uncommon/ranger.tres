@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="UnitType" load_steps=2 format=3 uid="uid://bsfnnltelsj0s"]
+
+[ext_resource type="Script" path="res://logic/core/unit/UnitType.cs" id="1_hyplk"]
+
+[resource]
+script = ExtResource("1_hyplk")
+Name = ""
+SlotsNeeded = 1
+Size = 2
+Cost = 2
+MaxHealth = 1000.0
+MaxMana = 100.0
+StartingMana = 100.0
+Armor = 10.0
+Aegis = 10.0
+Strength = 50.0
+AttackSpeed = 0.75
+Range = 1.0

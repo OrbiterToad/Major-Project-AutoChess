@@ -1,0 +1,13 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://icmuhsqdit8s"]
+
+[ext_resource type="Shader" path="res://plugins/MaterialTheming/shaders/DecoratedPanelShader.gdshader" id="1_wfbhk"]
+
+[resource]
+shader = ExtResource("1_wfbhk")
+shader_parameter/animated = null
+shader_parameter/animation_duration = null
+shader_parameter/highlight_color = Color(0, 0, 0, 1)
+shader_parameter/loop_animation = null
+shader_parameter/animation_mode = null
+shader_parameter/start_time = null
+shader_parameter/noise_scale = null
