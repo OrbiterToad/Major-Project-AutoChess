@@ -1,8 +1,9 @@
 [gd_resource type="Resource" script_class="UnitType" load_steps=4 format=3 uid="uid://cgg2wp7hi636j"]
 
-[ext_resource type="PackedScene" uid="uid://cdj41tcujebtk" path="res://assets/season0/units/epic/mage_prefab.tscn" id="1_b205b"]
+[ext_resource type="PackedScene" uid="uid://cdj41tcujebtk" path="res://season0/units/epic/mage_prefab.tscn" id="1_b205b"]
 [ext_resource type="Script" path="res://logic/core/unit/UnitType.cs" id="1_gjtii"]
 [ext_resource type="Texture2D" uid="uid://uv15gyjx8dmh" path="res://icon.svg" id="1_w6dhe"]
+
 
 [resource]
 script = ExtResource("1_gjtii")

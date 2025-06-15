@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://beg1lu503cw25"]
 
 [ext_resource type="Script" path="res://logic/core/unit/UnitInstance.cs" id="1_f1q5u"]
-[ext_resource type="SpriteFrames" uid="uid://ctpas6cf6vnti" path="res://assets/season0/units/rare/warrior_sprite_frames.tres" id="2_8x846"]
-[ext_resource type="Script" path="res://logic/season0/spells/legendary/SummonerSpell.cs" id="3_vsmxc"]
+[ext_resource type="SpriteFrames" uid="uid://ctpas6cf6vnti" path="res://season0/units/rare/warrior_sprite_frames.tres" id="2_8x846"]
+[ext_resource type="Script" path="res://season0/units/legendary/SummonerSpell.cs" id="3_vsmxc"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_t4383"]
 radius = 14.0

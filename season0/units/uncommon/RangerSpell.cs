@@ -2,7 +2,7 @@ using Godot;
 using MPAutoChess.logic.core.stats;
 using MPAutoChess.logic.core.unit;
 
-namespace MPAutoChess.logic.season0.spells.uncommon;
+namespace MPAutoChess.season0.units.uncommon;
 
 [GlobalClass, Tool]
 public partial class RangerSpell : Spell {

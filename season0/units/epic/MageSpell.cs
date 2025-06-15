@@ -3,7 +3,7 @@ using Godot;
 using MPAutoChess.logic.core.stats;
 using MPAutoChess.logic.core.unit;
 
-namespace MPAutoChess.logic.season0.spells.epic;
+namespace MPAutoChess.season0.units.epic;
 
 [GlobalClass, Tool]
 public partial class MageSpell : Spell {

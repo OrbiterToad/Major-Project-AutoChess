@@ -2,7 +2,7 @@ using Godot;
 using MPAutoChess.logic.core.stats;
 using MPAutoChess.logic.core.unit;
 
-namespace MPAutoChess.logic.season0.spells.common;
+namespace MPAutoChess.season0.units.common;
 
 [GlobalClass, Tool]
 public partial class TankSpell : Spell {

@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://ciphnirn3ae0b"]
 
 [ext_resource type="Script" path="res://logic/core/unit/UnitInstance.cs" id="1_r7f0l"]
-[ext_resource type="SpriteFrames" uid="uid://ctpas6cf6vnti" path="res://assets/season0/units/rare/warrior_sprite_frames.tres" id="2_tox5l"]
-[ext_resource type="Script" path="res://logic/season0/spells/uncommon/RangerSpell.cs" id="3_k08ky"]
+[ext_resource type="SpriteFrames" uid="uid://ctpas6cf6vnti" path="res://season0/units/rare/warrior_sprite_frames.tres" id="2_tox5l"]
+[ext_resource type="Script" path="res://season0/units/uncommon/RangerSpell.cs" id="3_y2m5c"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_o4pqj"]
 
@@ -17,4 +17,4 @@ sprite_frames = ExtResource("2_tox5l")
 animation = &"idle"
 
 [node name="RangerSpell" type="Node" parent="."]
-script = ExtResource("3_k08ky")
+script = ExtResource("3_y2m5c")

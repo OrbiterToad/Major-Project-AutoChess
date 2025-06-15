@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://kp0j4lloobtk"
-path="res://.godot/imported/warrior_sprite_sheet.png-b12cf4690ece23c0b00682b0555c00e8.ctex"
+path="res://.godot/imported/warrior_sprite_sheet.png-6e025a8f789c6eb78aac9bfcf2a74a9b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/season0/units/rare/warrior_sprite_sheet.png"
-dest_files=["res://.godot/imported/warrior_sprite_sheet.png-b12cf4690ece23c0b00682b0555c00e8.ctex"]
+source_file="res://season0/units/rare/warrior_sprite_sheet.png"
+dest_files=["res://.godot/imported/warrior_sprite_sheet.png-6e025a8f789c6eb78aac9bfcf2a74a9b.ctex"]
 
 [params]
 

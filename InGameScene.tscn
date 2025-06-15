@@ -3,10 +3,11 @@
 [ext_resource type="Script" path="res://logic/core/player/PlayerController.cs" id="1_1ss78"]
 [ext_resource type="PackedScene" uid="uid://cvu8csgnfw3cs" path="res://ui/Bench.tscn" id="2_166rw"]
 [ext_resource type="Script" path="res://logic/core/game/DummyGameManager.cs" id="3_dkcr1"]
-[ext_resource type="Script" path="res://logic/season0/Season0.cs" id="4_qnth6"]
-[ext_resource type="Resource" uid="uid://15mwm4jux6bs" path="res://assets/season0/season0_units.tres" id="5_o5nxx"]
+[ext_resource type="Script" path="res://season0/Season0.cs" id="4_qnth6"]
+[ext_resource type="Resource" uid="uid://15mwm4jux6bs" path="res://season0/season0_units.tres" id="5_o5nxx"]
 [ext_resource type="PackedScene" uid="uid://b1mjtwvjjws5j" path="res://ui/Shop.tscn" id="6_5154x"]
 [ext_resource type="Script" path="res://logic/core/player/Player.cs" id="6_jbqxp"]
+
 
 [node name="InGameScene" type="Node2D"]
 
