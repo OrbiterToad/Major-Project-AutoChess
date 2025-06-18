@@ -31,11 +31,11 @@ public class Unit {
         if (unitContainer == Container) {
             Unit? existingUnit = unitContainer.GetUnitAt(position);
             return unitContainer.CanFitAt(this, position, existingUnit);
-        } else {
-            Unit? existingUnit = unitContainer.GetUnitAt(position);
-            bool thisCanFit = unitContainer.CanFitAt(this, position, existingUnit);
-            bool existingCanFit = existingUnit == null || Container.CanFitAt(existingUnit, Container.GetPlacement(this), this);
-            return thisCanFit && existingCanFit;
-        }
+        } 
+
+        Unit? existingUnit = unitContainer.GetUnitAt(position);
+        bool thisCanFit = unitContainer.CanFitAt(this, position, existingUnit);
+        bool existingCanFit = existingUnit == null || Container.CanFitAt(existingUnit, Container.GetPlacement(this), this);
+        return thisCanFit && existingCanFit;
     }
 }

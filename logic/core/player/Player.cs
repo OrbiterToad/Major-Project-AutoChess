@@ -29,12 +29,11 @@ public partial class Player : Node {
     public bool TryPurchase(UnitType unitType) {
         SingleUnitSlot benchSlot = Bench.GetFirstFreeSlot();
         if (benchSlot == null) return false;
-        if (Gold >= unitType.Cost) {
-            Gold -= unitType.Cost;
-            benchSlot.AddUnit(new Unit(unitType), Vector2.Zero);
-            return true;
-        }
-        return false;
+        if (Gold < unitType.Cost) return false;
+        
+        Gold -= unitType.Cost;
+        benchSlot.AddUnit(new Unit(unitType), Vector2.Zero);
+        return true;
     }
     
     public void MoveToTemporaryBench(unit.Unit unit) {

@@ -28,7 +28,9 @@ public partial class Board : Node2D, UnitContainer {
     }
     
     private static bool DoesOverlap(Vector2 aPos, Vector2 aSize, Vector2 bPos, Vector2 bSize) {
-        return aPos.X < bPos.X + bSize.X && aPos.X + aSize.X > bPos.X && aPos.Y < bPos.Y + bSize.Y && aPos.Y + aSize.Y > bPos.Y;
+        bool overlapX = aPos.X < bPos.X + bSize.X && aPos.X + aSize.X > bPos.X;
+        bool overlapY = aPos.Y < bPos.Y + bSize.Y && aPos.Y + aSize.Y > bPos.Y;
+        return overlapX && overlapY;
     }
 
     public unit.Unit? GetUnitAt(Vector2 position) {

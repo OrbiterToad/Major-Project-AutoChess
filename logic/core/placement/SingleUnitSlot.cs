@@ -77,13 +77,13 @@ public partial class SingleUnitSlot : Area2D, UnitContainer {
         return true;
     }
     public Vector2 RemoveUnit(unit.Unit unit) {
-        if (unit == Unit) {
-            Unit.Container = null;
-            Unit = null;
-            return Vector2.Zero;
-        } else {
+        if (unit != Unit) {
             return Vector2.One * -1;
         }
+        
+        Unit.Container = null;
+        Unit = null;
+        return Vector2.Zero;
     }
     public void AddUnit(unit.Unit unit, Vector2 position) {
         Unit = unit;

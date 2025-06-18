@@ -6,6 +6,15 @@ using MPAutoChess.logic.core.unit;
 
 namespace MPAutoChess.logic.core.shop;
 
+public enum UnitRarity {
+    Common,
+    Uncommon,
+    Rare,
+    Epic,
+    Legendary
+}
+
+
 public partial class Shop : Control {
     
     [Export] public Button RerollButton { get; set; }
@@ -28,19 +37,19 @@ public partial class Shop : Control {
             int rarity = new Random().Next(5);
             UnitType[] pool;
             switch (rarity) {
-                case 0:
+                case UnitRarity.Common:
                     pool = DummyGameManager.Instance.Season.Units.CommonUnits;
                     break;
-                case 1:
+                case UnitRarity.Uncommon:
                     pool = DummyGameManager.Instance.Season.Units.UncommonUnits;
                     break;
-                case 2:
+                case UnitRarity.Rare:
                     pool = DummyGameManager.Instance.Season.Units.RareUnits;
                     break;
-                case 3:
+                case UnitRarity.Epic:
                     pool = DummyGameManager.Instance.Season.Units.EpicUnits;
                     break;
-                case 4:
+                case UnitRarity.Legendary:
                     pool = DummyGameManager.Instance.Season.Units.LegendaryUnits;
                     break;
                 default:

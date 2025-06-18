@@ -19,7 +19,7 @@ public partial class DummyGameManager : Node {
         game.Mode = new EchoMode();
         AddChild(game);
         
-        Account[] accounts = new Account[8];
+        Account[] accounts = new Account[8]; // magic number
         for (int i = 0; i < 8; i++) {
             accounts[i] = new Account("Player " + (i + 1));
         }
